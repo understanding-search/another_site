@@ -7,15 +7,17 @@
     {{ partial "single/homepage" . }}
     </div>
 {{ else }}
+    <span class="distill-article-entire">
     {{ partial "distill/header" . }}
 
     {{ partial "distill/d-front-matter" . }}
-
+    
     {{ partial "distill/d-title" . }}
 
     {{ partial "distill/d-article" . }}
 
     {{ partial "distill/d-appendix" . }}
+    </span>
     <div class="max-w-screen-md px-10 mx-auto">
         {{ partial "single/components/comments/comments" . }}
     </div>

@@ -961,9 +961,63 @@ span.begin-task-list + ul {
   --onyx: #37393aff;
 }
 
-.bg-color {
-  background-color: var(--alice-blue);
+.bg-color:before{
+    content: "";
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 182px;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
 }
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  /* It's good practice to reset default margins */
+  padding: 0;
+  /* Reset default paddings as well */
+}
+
+.bg-color {
+  /* resulting css */
+  min-width: 100%;
+  min-height: 100%;
+  background: var(--alice-blue);
+  position: absolute;
+  /* overflow: auto; */
+  /* overflow: hidden; */
+}
+/* 
+.distill-article-entire:before {
+  content: "";
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 182px;
+  opacity: 1.0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -900;
+}
+
+
+.distill-article-entire {
+  width: 100%;
+  height: 100%;
+  background: var(--hunyadi-yellow);
+} 
+ */
+
 
 .header-font {
   color: var(--keppel);
