@@ -1,0 +1,8 @@
+<d-title>
+  {{- if and (.Params.Distill.SupportFiles.DTitle) (fileExists ((printf "%s%s" .File.Dir .Params.Distill.SupportFiles.DTitle))) -}}
+    {{- readFile (printf "%s%s" .File.Dir .Params.Distill.SupportFiles.DTitle) | safeHTML -}}
+  <!-- otherwise us h1  -->
+  {{- else -}}
+    <h1 class="text-4xl font-extrabold header-font">{{ if .Params.header }}{{ .Params.header }}{{ else }}{{ .Title }}{{ end }}</h1>
+  {{- end -}}
+</d-title>

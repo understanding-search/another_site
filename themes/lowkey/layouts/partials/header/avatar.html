@@ -1,0 +1,10 @@
+{{ $avatar := resources.GetMatch .Site.Params.avatar }}
+{{ $resizedAvatar := ($avatar.Resize "x80 q90") }} <!-- Resize to height of 80px, preserving aspect ratio -->
+<div class="flex-none w-auto h-20"> <!-- Remove the forced square dimensions and rounded-full classes -->
+    <a href="{{ .Site.BaseURL }}">
+        <!-- Use the resized avatar image for srcset and src attributes -->
+        <img srcset="{{- with $resizedAvatar.RelPermalink -}}{{.}} {{ $resizedAvatar.Width }}w{{- end -}}"
+            src="{{ $resizedAvatar.RelPermalink }}" width="{{ $resizedAvatar.Width }}"
+            height="{{ $resizedAvatar.Height }}" alt="{{ .Site.Title }}">
+    </a>
+</div>
