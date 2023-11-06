@@ -1,17 +1,24 @@
 
 {{ define "main" }}
-{{ partial "distill/header" . }}
 
-{{ partial "distill/d-front-matter" . }}
+<!-- if isPlain property is set -->
+{{ if .Params.isPlain }}
+    <div class="max-w-screen-md px-10 mx-auto">
+    {{ partial "single/homepage" . }}
+    </div>
+{{ else }}
+    {{ partial "distill/header" . }}
 
-{{ partial "distill/d-title" . }}
+    {{ partial "distill/d-front-matter" . }}
 
-{{ partial "distill/d-article" . }}
+    {{ partial "distill/d-title" . }}
 
-{{ partial "distill/d-appendix" . }}
-<div class="max-w-screen-md px-10 mx-auto">
-{{ partial "single/components/comments/comments" . }}
-</div>
+    {{ partial "distill/d-article" . }}
 
+    {{ partial "distill/d-appendix" . }}
+    <div class="max-w-screen-md px-10 mx-auto">
+        {{ partial "single/components/comments/comments" . }}
+    </div>
+{{ end }}
 {{ end }}
 
