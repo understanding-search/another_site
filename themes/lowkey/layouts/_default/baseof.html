@@ -3,8 +3,10 @@
     <head>
     {{- partial "head.html" . -}}
     </head>
-    <body class="max-w-screen-md px-10 mx-auto bg-color">
+    <body class="bg-color">
+        <div class ="max-w-screen-md px-10 mx-auto">
         {{ partial "header.html" . }}
+        </div>
         <!-- <main id="content"> -->
         {{- block "main" . }}{{- end }}
         <!-- </main> -->

@@ -43,6 +43,15 @@ strong {
   opacity: 0.7;
 }
 
+.title-line {
+  border: 0;
+  border-bottom: 2px solid ;
+  color: var(--keppel);
+  margin: 0;
+  margin-bottom: 1rem;
+  padding-top: 0rem;
+}
+
 @layer base {
   /* inter-100 - latin */
   @font-face {

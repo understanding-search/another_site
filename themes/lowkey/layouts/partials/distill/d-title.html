@@ -1,4 +1,7 @@
-<d-title>
+<!-- specify padding as 0 -->
+<hr class="title-line">
+<d-title style="padding: 0; padding-bottom: 1rem;">
+   <!-- horizontal line -->
   {{- if and (.Params.Distill.SupportFiles.DTitle) (fileExists ((printf "%s%s" .File.Dir .Params.Distill.SupportFiles.DTitle))) -}}
     {{- readFile (printf "%s%s" .File.Dir .Params.Distill.SupportFiles.DTitle) | safeHTML -}}
   <!-- otherwise us h1  -->
