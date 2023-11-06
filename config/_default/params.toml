@@ -14,11 +14,11 @@ disqusShortname = ""
 enableEmoji = true
 
  # giscus is a comment system based on GitHub Discussions. see https://giscus.app
-[giscus]       
+[giscus]
     enable = true
     repo = "understanding-search/another_site"
     repoId = "R_kgDOKpwuvQ"
-    category = "Announcements"
+    category = "Discussion"
     categoryId = "DIC_kwDOKpwuvc4CatmI"
     mapping = "title"  # comment value is the default value
     strict = 0
