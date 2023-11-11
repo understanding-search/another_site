@@ -6,6 +6,7 @@ thumbnail = ""
 categories = [
   "demo"
 ]
+draft = "true"
 tags = []
 
 vega = true
