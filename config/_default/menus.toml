@@ -10,18 +10,18 @@
     url = "/research"
     weight = 2
 
-[[main]]
-    identifier = "team"
-    name = "Team"
-    url = "/team"
-    weight = 3
+#[[main]]
+    #identifier = "team"
+    #name = "Team"
+    #url = "/team"
+    #weight = 3
 
 
-[[main]]
-    identifier = "get_involved"
-    name = "Get Involved"
-    url = "/get-involved"
-    weight = 4
+#[[main]]
+    #identifier = "get_involved"
+    #name = "Get Involved"
+    #url = "/get-involved"
+    #weight = 4
 
 [[main]] 
     identifier = "aisc"
