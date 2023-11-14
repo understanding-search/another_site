@@ -17,21 +17,65 @@ vega = true
   appendix = "appendix.html"
   bibliography = "refs.bib"
 
-  [[distill.authors]]
-  author = "Chris Olah"
-  authorURL = "http://colah.github.io/"
+[[distill.authors]]
+author = "Michael I. Ivanitskiy"
+affiliations = [
+  { name = "Colorado School of Mines", url = "" }
+]
 
-    [[distill.authors.affiliations]]
-    name = "Google Brain"
-    url = "http://g.co/brain"
+[[distill.authors]]
+author = "Alex F. Spies"
+affiliations = [
+  { name = "Imperial College London", url = "" },
+  { name = "NII Tokyo", url = "" }
+]
 
-  [[distill.authors]]
-  author = "Shan Carter"
-  authorURL = "http://shancarter.com"
+[[distill.authors]]
+author = "Tilman Räuker"
+affiliations = []
 
-    [[distill.authors.affiliations]]
-    name = "Google Brain"
-    url = "http://g.co/brain"
+[[distill.authors]]
+author = "Guillaume Corlouer"
+affiliations = []
+
+[[distill.authors]]
+author = "Chris Mathwin"
+affiliations = []
+
+[[distill.authors]]
+author = "Lucia Quirke"
+affiliations = []
+
+[[distill.authors]]
+author = "Can Rager"
+affiliations = []
+
+[[distill.authors]]
+author = "Rusheb Shah"
+affiliations = []
+
+[[distill.authors]]
+author = "Dan Valentine"
+affiliations = []
+
+[[distill.authors]]
+author = "Cecilia Diniz Behn"
+affiliations = [
+  { name = "Colorado School of Mines", url = "" }
+]
+
+[[distill.authors]]
+author = "Katsumi Inoue"
+affiliations = [
+  { name = "National Institute of Informatics, Tokyo", url = "" }
+]
+
+[[distill.authors]]
+author = "Samy Wu Fung"
+affiliations = [
+  { name = "Colorado School of Mines", url = "" }
+]
+
 +++
 
 

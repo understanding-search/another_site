@@ -15,7 +15,7 @@
 </article>
 {{ else }}
 <article class="flex flex-col gap-1 list-item-box">
-    <h1 class="text-xl hover:underline"> <a href=" {{ .Permalink }} ">{{ .Title }}</a></h1>
+    <h1 class="text-xl hover:underline list-link"> <a href=" {{ .Permalink }} ">{{ .Title }}</a></h1>
     <div class="text-gray-600">
     {{ if .Params.description }}
     {{ .Params.description }}    
