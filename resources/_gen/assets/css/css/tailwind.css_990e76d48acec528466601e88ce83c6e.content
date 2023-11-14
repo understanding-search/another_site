@@ -963,6 +963,9 @@ span.begin-task-list + ul {
 .tags-list {
   row-gap: 0.5rem;
 }
+.\[mailto\:team\@unsearch\.org\] {
+  mailto: team@unsearch.org;
+}
 
 
 /* css colors */
