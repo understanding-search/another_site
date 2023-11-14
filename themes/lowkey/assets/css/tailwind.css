@@ -99,6 +99,28 @@ body {
   /* Remove underline */
 }
 
+/* DISTILL */
+/* AUTHOR GRID STYLING */
+.byline.grid {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  gap: 10px;
+  /* Adjust the gap between columns as needed */
+}
+
+.authors-affiliations.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Adjust if you need different ratios within the authors and affiliations */
+  gap: 10px;
+  /* Adjust the gap between columns as needed */
+}
+
+/* force affiliation spans to be on new lines */
+/* p.affiliation span.affiliation {
+  display: block;
+} */
+
 blockquote {
   font-size: 6 !important;
 }
