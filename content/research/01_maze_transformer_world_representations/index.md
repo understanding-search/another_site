@@ -22,7 +22,7 @@ vega = true
 author = "Michael I. Ivanitskiy¹, Alex F. Spies²³, Tilman Räuker, Guillaume Corlouer, Chris Mathwin, Lucia Quirke, Can Rager, Rusheb Shah, Dan Valentine, Cecilia Diniz Behn¹, Katsumi Inoue², Samy Wu Fung¹"
 affiliations = [
   { name = "¹Colorado School of Mines", url = "" },
-  { name = "²NII, Tokyo", url = "" },
+  { name = "²NII Tokyo", url = "" },
   { name = "³Imperial College London", url = "" }
 ]
 
