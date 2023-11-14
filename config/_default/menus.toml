@@ -4,11 +4,20 @@
     url = "/"
     weight = 1
 
+
 [[main]]
-    identifier = "research"
-    name = "Research"
-    url = "/research"
+    identifier = "about"
+    name = "About"
+    url = "/about"
     weight = 2
+
+
+
+#[[main]]
+#    identifier = "research"
+#    name = "Research"
+#    url = "/research"
+#    weight = 2
 
 #[[main]]
     #identifier = "team"
@@ -26,7 +35,7 @@
 [[main]] 
     identifier = "aisc"
     name = "AISC"
-    url = "https://unsearch-ai.notion.site/AISC-2024-Research-Proposal-5adbd5918fe443c491a0a5b4252113fc?pvs=4"
+    url = "/aisc"
     weight = 5
 
 #[[main]]

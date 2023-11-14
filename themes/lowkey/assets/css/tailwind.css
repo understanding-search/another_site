@@ -76,8 +76,49 @@ body {
 
 /* change bold styling */
 .font-bold {
-  font-weight: 700;
+  font-weight: 550;
   color: var(--amaranth);
+}
+
+.list-link {
+  /* font-weight: 450; */
+  color: var(--onyx);
+  /* var(--gray); */
+}
+
+
+.list-item-box {
+  border: 2px solid var(--keppel);
+  /* Default border color */
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  /* Smooth transition for hover effect */
+}
+
+.list-item-box:hover {
+  /* Change border color on hover */
+  border-color: var(--hunyadi-yellow);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Optional: add a shadow effect on hover */
+}
+
+.list-item-box .list-link,
+.list-item-box .list-link a {
+  color: inherit;
+  /* Inherit text color */
+  transition: color 0.3s ease;
+  /* Smooth transition for text color */
+}
+
+.list-item-box:hover .list-link,
+.list-item-box:hover .list-link a {
+  color: var(--amaranth);
+  transition: color 0.3s ease;
+  /* Change text color to red */
+  text-decoration: none;
+  /* Remove underline */
 }
 
 blockquote {
