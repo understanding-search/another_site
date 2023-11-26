@@ -1022,8 +1022,13 @@ body {
 
 .list-link {
   /* font-weight: 450; */
-  color: var(--onyx);
-  /* var(--gray); */
+  /* color: var(--onyx); */
+  text-decoration: none;
+    /* Removes underline from the entire box */
+    color: inherit;
+    /* Inherits the color from parent elements */
+    display: block;
+    /* Makes the anchor cover the entire article box */
 }
 
 

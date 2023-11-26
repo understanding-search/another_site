@@ -1,28 +1,31 @@
 {{ if .Params.external_link  }}
 <!-- If 'only_link' is defined, display just an external link -->
-<article class="flex flex-col gap-1 list-item-box">
-    <h1 class="text-xl hover:underline list-link">
-        <a href="{{ .Params.external_link }}" target="_blank" rel="noopener noreferrer">{{ .Title }}</a>
-    </h1>
-    <div class="text-gray-600">
+<a href="{{ .Params.external_link }}" target="_blank" rel="noopener noreferrer" class="list-item-link">
+    <article class="flex flex-col gap-1 list-item-box">
+        <h1 class="text-xl list-link">{{ .Title }}</h1>
+        <div class="text-gray-600">
     {{ if .Params.description }}
     {{ .Params.description }}
     {{ else if .Summary }}
     {{ .Summary }}
     {{ end }}
     </div>
-    <div class="mt-2 text-gray-800"><em>External Link</em></div>
+    <div class="mt-2 text-gray-800 list-link"><em>External Link</em></div>
 </article>
+</a>
 {{ else }}
-<article class="flex flex-col gap-1 list-item-box">
-    <h1 class="text-xl hover:underline list-link"> <a href=" {{ .Permalink }} ">{{ .Title }}</a></h1>
+<a href=" {{ .Permalink }} " class="list-item-link">
+    <article class="flex flex-col gap-1 list-item-box">
+    <h1 class="text-xl list-link">{{ .Title }}</h1>
+    
     <div class="text-gray-600">
     {{ if .Params.description }}
     {{ .Params.description }}    
-    {{ else if .Summary  }}
+    {{ else if .Summary  }}k
     {{ .Summary }}
     {{ end }}
     </div>
-    <div class="mt-2"><a class="inline-flex  gap-2 text-sm font-semibold items-center text-emerald-700 hover:text-emerald-600" href="{{ .Permalink }}">Read This Article <span class="w-4 h-4 stroke-2">{{ partial "handler/svg" "arrow-right" }}</span> </a> </div>
+    <div class="mt-2 text-gray-800 list-link"><em>Blog Post</em></div>
 </article>
+</a>
 {{ end }}

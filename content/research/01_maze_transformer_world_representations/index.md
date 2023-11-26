@@ -36,6 +36,35 @@ affiliations = [
 Our first paper, investigating the formation of world models and simple path-following circuits in maze-solving transformers, has been accepted to the UniReps workshop at NeurIPS23! The article and accompanying blog post will be made public in the week following November 16th.
 
 
+Blog Post: Unraveling the Maze of Transformer Models in Maze-Solving Tasks
+Title: "Decoding Mazes: How Small Transformer Models Illuminate Big Machine Learning Mysteries"
+
+🤖 Understanding Transformer Models Through Mazes
+
+As AI continues to advance at a breathtaking pace, researchers are keen to understand the internal workings of sophisticated transformer models. These models, the backbone of numerous practical machine learning applications, remain largely enigmatic due to their size and complexity.
+
+A recent study led by Michael I. Ivanitskiy and team at the Colorado School of Mines and Imperial College London takes an innovative approach to this challenge. They focus on small transformer models tasked with solving mazes, offering a more manageable window into understanding these powerful tools.
+
+🌐 Structured World Representations and Maze Topology
+
+The research reveals that these models consistently develop structured internal representations of maze topology and valid paths. The team discovered that the embedded representations of a single token could linearly decode to reconstruct the entire maze accurately. They identified specific attention heads within the models, termed "adjacency heads," crucial for identifying valid "next steps" in the maze-solving process.
+
+🔍 Experimental Insights: From Theory to Practice
+
+The study employed various interpretability techniques, confirming that the geometry of the models' embedding space correlates with the spatial structure of the mazes. The experiments demonstrated that high-performing models form a linear representation of maze connectivity, decodable at early layers. This finding suggests a structured internal representation enhances the models' systematic problem-solving abilities.
+
+🚀 When Do Models Learn to Represent the Maze?
+
+A fascinating aspect of the research was the observation of grokking-like transitions during training. These transitions, where a model's ability to generalize suddenly improves, coincided with times when the models' internal representations of the maze became more linearly decodable. This correlation hints at the significant role these structured representations play in the models' problem-solving capabilities.
+
+💡 Implications and Future Directions
+
+The study's findings have far-reaching implications. They offer insights into how small transformer models acquire and process knowledge, contributing to our understanding of machine learning's broader landscape. The researchers plan to delve deeper into these findings, hoping to inspire further exploration into the systematic yet elusive behavior of transformer models.
+
+Intrigued? Check out the full study for a deeper dive into the world of transformers and maze-solving: [Link to Research Article]
+
+#AIResearch #MachineLearning #Transformers #MazeSolving #AIUnderstanding
+
 <!-- 
 [[distill.authors]]
 author = "Michael I. Ivanitskiy"
