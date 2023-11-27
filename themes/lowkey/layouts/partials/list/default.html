@@ -1,7 +1,7 @@
 {{ if .Params.external_link  }}
 <!-- If 'only_link' is defined, display just an external link -->
 <a href="{{ .Params.external_link }}" target="_blank" rel="noopener noreferrer" class="list-item-link">
-    <article class="flex flex-col gap-1 list-item-box">
+            <article class="flex flex-col gap-1 list-item-box">
         <h1 class="text-xl list-link">{{ .Title }}</h1>
         <div class="text-gray-600">
     {{ if .Params.description }}
