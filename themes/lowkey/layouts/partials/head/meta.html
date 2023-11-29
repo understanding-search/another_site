@@ -8,3 +8,14 @@
 <meta name="description" content="{{ if .IsPage }}{{ or .Params.description .Summary }}{{ else if .IsHome }}{{ .Site.Params.description }}{{ else if .IsNode }}{{ or .Params.description .Summary }}{{ end }}">
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="robots" href="/robots.txt" />
+
+<!-- Open Graph tags -->
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description"
+    content="{{ if .IsPage }}{{ or .Params.description .Summary }}{{ else if .IsHome }}{{ .Site.Params.description }}{{ else if .IsNode }}{{ or .Params.description .Summary }}{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<!-- favicon -->
+{{- $logo := resources.Get "img/logo_full.png" | fingerprint }}
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<!-- Replace 'your_logo.png' with the path to your logo -->
+<meta property="og:image" content="{{ $logo.Permalink }}">
