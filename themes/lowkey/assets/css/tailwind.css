@@ -49,7 +49,7 @@ body {
 
 
 .header-font {
-  color: var(--keppel);
+  color: var(--onyx);
 }
 
 /* change bold styling */
@@ -71,7 +71,7 @@ body {
 
 
 .list-item-box {
-  border: 2px solid var(--keppel);
+  border: 2px solid var(--onyx);
   /* Default border color */
   padding: 10px;
   margin-bottom: 10px;
@@ -146,7 +146,7 @@ strong {
 .title-line {
   border: 0;
   border-bottom: 2px solid ;
-  color: var(--keppel);
+  color: var(--onyx);
   margin: 0;
   margin-bottom: 1rem;
   padding-top: 0rem;
