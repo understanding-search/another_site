@@ -5,7 +5,7 @@ isSinglePage = true
 description = "Researching Inner Alignment and Goal Misgeneralization in Transformers"
 
 # Header Configuration
-avatar = "img/logo.png"
+avatar = "img/logo.svg"
 
 # disqus is a comment system. see https://disqus.com
 disqusShortname = ""
