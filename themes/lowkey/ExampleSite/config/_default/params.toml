@@ -5,7 +5,7 @@ isSinglePage = false
 description = "Hello"
 
 # Header Configuration
-avatar = "img/logo.svg"
+avatar = "img/logo.png"
 
 # disqus is a comment system. see https://disqus.com
 disqusShortname = ""
