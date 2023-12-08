@@ -30,10 +30,10 @@ affiliations = [
 
 
 <d-abstract>
-  <p>Our first paper, investigating the formation of world models and simple path-following circuits in maze-solving transformers, has been accepted to the UniReps workshop at NeurIPS23! The article and accompanying blog post will be made public in the week following November 16th.</p>
+  <p>Our [first paper](https://arxiv.org/abs/2312.02566), investigating the formation of world models and simple path-following circuits in maze-solving transformers, has been accepted to the UniReps workshop at NeurIPS23! The article and accompanying blog post will be made public in the week following November 16th.</p>
 </d-abstract>
   
-Our first paper, investigating the formation of world models and simple path-following circuits in maze-solving transformers, has been accepted to the UniReps workshop at NeurIPS23! The article and accompanying blog post will be made public in the week following November 16th.
+Our [first paper](https://arxiv.org/abs/2312.02566), investigating the formation of world models and simple path-following circuits in maze-solving transformers, has been accepted to the UniReps workshop at NeurIPS23! The article and accompanying blog post will be made public in the week following November 16th.
 
 <!-- 
 [[distill.authors]]
