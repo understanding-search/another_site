@@ -32,11 +32,11 @@
     #url = "/get-involved"
     #weight = 4
 
-[[main]] 
-    identifier = "aisc"
-    name = "AISC"
-    url = "/aisc"
-    weight = 5
+#[[main]] 
+#    identifier = "aisc"
+#    name = "AISC"
+#    url = "/aisc"
+#    weight = 5
 
 #[[main]]
 #    identifier = "categories"
