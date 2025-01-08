@@ -1,4 +1,16 @@
-+++
+---
+title: "Structured World Representations in Maze-Solving Transformers"
+draft: false
+date: 2023-11-14
+description: "We train transformers on mazes and use linear probing to show that they form internal representations of the entire maze, and find evidence for Adjacency Heads which attend to valid \"next moves\""
+categories:
+- demo
+tags:
+- arxiv
+external_link: https://arxiv.org/abs/2312.02566
+---
+
+<!-- +++
 title = "Structured World Representations in Maze-Solving Transformers"
 description = "Transformers trained to solve mazes form linear representations of the maze, and we find evidence for Adjacency Heads which attend to valid \"next moves\""
 date = "2023-11-14"
@@ -34,63 +46,4 @@ affiliations = [
 </d-abstract>
   
 Our [first paper](https://arxiv.org/abs/2312.02566), investigating the formation of world models and simple path-following circuits in maze-solving transformers, has been accepted to the UniReps workshop at NeurIPS23!
-
-<!-- 
-[[distill.authors]]
-author = "Michael I. Ivanitskiy"
-affiliations = [
-  { name = "Colorado School of Mines", url = "" }
-]
-
-[[distill.authors]]
-author = "Alex F. Spies"
-affiliations = [
-  { name = "Imperial College London", url = "" },
-  { name = "NII Tokyo", url = "" }
-]
-
-[[distill.authors]]
-author = "Tilman Räuker"
-affiliations = []
-
-[[distill.authors]]
-author = "Guillaume Corlouer"
-affiliations = []
-
-[[distill.authors]]
-author = "Chris Mathwin"
-affiliations = []
-
-[[distill.authors]]
-author = "Lucia Quirke"
-affiliations = []
-
-[[distill.authors]]
-author = "Can Rager"
-affiliations = []
-
-[[distill.authors]]
-author = "Rusheb Shah"
-affiliations = []
-
-[[distill.authors]]
-author = "Dan Valentine"
-affiliations = []
-
-[[distill.authors]]
-author = "Cecilia Diniz Behn"
-affiliations = [
-  { name = "Colorado School of Mines", url = "" }
-]
-
-[[distill.authors]]
-author = "Katsumi Inoue"
-affiliations = [
-  { name = "National Institute of Informatics, Tokyo", url = "" }
-]
-
-[[distill.authors]]
-author = "Samy Wu Fung"
-affiliations = [
-  { name = "Colorado School of Mines", url = "" }
-] -->
+ -->
