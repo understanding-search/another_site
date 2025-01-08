@@ -1,5 +1,6 @@
 ---
-title: "Post"
-header: "Research" # Optional
+title: Research
+description: Our research projects and publications
 ---
-<!-- See What I’ve Written Lately -->
+
+Here you'll find our latest research projects and publications.

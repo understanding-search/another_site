@@ -4,12 +4,17 @@
     url = "/"
     weight = 1
 
+[[main]] 
+    identifier = "research"
+    name = "Research"
+    url = "/research"
+    weight = 2
 
 [[main]]
     identifier = "about"
     name = "About"
     url = "/about"
-    weight = 2
+    weight = 3
 
 
 

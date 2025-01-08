@@ -1,0 +1,10 @@
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true 
+
+[server]
+  [[server.headers]]
+    for = "/js/*"
+    [server.headers.values]
+      Content-Type = "application/javascript" 

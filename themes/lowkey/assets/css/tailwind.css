@@ -110,7 +110,132 @@ body {
   display: grid;
   grid-template-columns: 75% 25%;
   gap: 10px;
-  /* Adjust the gap between columns as needed */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Override Distill's default grid template for wider pages */
+@media (min-width: 1000px) {
+  d-article,
+  d-byline,
+  d-title {
+    max-width: 55% !important;
+    margin: 0 auto !important;
+  }
+
+  d-title {
+    padding-top: 1rem !important;
+  }
+
+  d-article > *,
+  d-title > *,
+  d-header > *,
+  distill-header > * {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start text-start] minmax(500px, 73%) [text-end page-end] 1fr [screen-end] !important;
+    grid-column-gap: 32px !important;
+    overflow-x: hidden !important;
+  }
+
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix {
+    grid-column: text !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Ensure code blocks and pre elements wrap properly */
+  d-article pre,
+  d-article code {
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Ensure tables don't overflow */
+  d-article table {
+    display: block !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+  }
+}
+
+/* Add styles for d-article to make content wider */
+
+/* Style the article body */
+d-article .l-body {
+  width: 100% !important;
+}
+
+/* Allow figures to be wider */
+d-article d-figure, 
+d-article figure,
+d-article .figure-container,
+d-article .zoomable-figure,
+d-article > figure {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  grid-column: text !important;
+  overflow-x: hidden !important;
+}
+
+/* Ensure images within figures maintain aspect ratio and don't overflow */
+d-article figure img,
+d-article d-figure img {
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* Style the abstract consistently with main content */
+d-abstract {
+  position: relative;
+  cursor: pointer;
+  padding: 1rem;
+  border: 1px solid var(--onyx);
+  border-radius: 5px;
+  margin: 2rem auto;
+  transition: all 0.3s ease;
+}
+
+d-abstract:before {
+  content: "Abstract ▼";
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--amaranth);
+}
+
+d-abstract.collapsed {
+  max-height: 3rem;
+  overflow: hidden;
+}
+
+d-abstract.collapsed:before {
+  content: "Abstract ▶";
+}
+
+d-abstract:hover {
+  border-color: var(--hunyadi-yellow);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .authors-affiliations.grid {
@@ -245,123 +370,136 @@ strong {
   }
 }
 
-@layer utilities {
-    .content a {
-        @apply font-bold underline;
-    }
-
-    .content p, .content hr, .content pre, .content dl {
-      @apply mb-5;
-    }
-
-    .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-      @apply font-bold text-gray-900 mb-5 pt-2;
-    }
-
-    .content h1 {
-      @apply text-4xl leading-10;
-    }
-
-    .content h2 {
-      @apply text-3xl leading-10;
-    }
-
-    .content h3 {
-      @apply text-2xl;
-    }
-
-    .content h4 {
-      @apply text-xl;
-    }
-
-    .content h5 {
-      @apply text-lg;
-    }
-
-    .content h6 {
-      @apply text-base;
-    }
-
-    .content blockquote {
-      @apply text-base text-gray-500 px-6 pt-6 pb-3 mt-5 mb-3 rounded-lg border
-    }
-
-    .content ol, .content ul {
-      @apply grid gap-2 mb-5 ml-6;
-    }
-
-    .content .footnotes ol {
-      @apply block
-    }
-
-    .content .footnotes li {
-      @apply mb-3
-    }
-
-    .content ol {
-      @apply list-decimal
-    }
-
-    .content ul {
-      @apply list-disc
-    }
-    
-    .content code {
-      @apply px-2 py-1 bg-gray-100 border rounded-lg;
-    }
-
-    .content code.language-text, .highlight code {
-      @apply px-0
-    }
-
-    .content table {
-      @apply w-full border rounded-lg border-separate border-spacing-0 mb-5;
-    }
-
-    .content thead th {
-      @apply border-b-2 border-r last:border-r-0 py-2 px-3;
-    }
-
-    .content tbody td {
-      @apply py-2 px-3 border-b text-base border-r last:border-r-0;
-    }
-
-    .content tbody tr:last-child td {
-      @apply border-b-0
-    }
-
-    .content pre {
-      @apply rounded-lg border p-5 overflow-auto
-    }
-
-    .content pre code {
-      @apply bg-transparent border-0
-    }
-
-    .content .footnotes {
-      @apply text-sm
-    }
-    .content .footnotes p {
-      @apply inline-block mb-0
-    }
-
-    .content dt {
-      @apply font-bold italic
-    }
-
-    
-
-    .content dd {
-      @apply pl-10
-    }
-
-    span.begin-task-list + ul {
-      list-style: none;
-    }
-    .taxonomy-list {
-      @apply flex flex-row flex-wrap gap-x-2 gap-y-6;
-    }
-    .tags-list {
-      @apply gap-y-2;
-    }
+/* Image styling */
+.methodology-diagram img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.8);
+  padding: 12px;
+  width: 100%;
+  margin: 2em 0;
 }
+
+.maze-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.maze-image img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.8);
+  padding: 12px;
+}
+
+.maze-image figcaption {
+  font-size: 0.9em;
+  margin-top: 1em;
+}
+
+/* Abstract styling */
+d-abstract.abstract {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Figure styling */
+.zoomable-figure {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  background: var(--color-background, white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.zoomable-figure:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.figure-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.zoomed-figure-container {
+  max-width: min(1200px, 90vw);
+  max-height: 85vh;
+  overflow: auto;
+  background: white;
+  border-radius: 8px;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zoomable-figure.zoomed {
+  cursor: auto;
+  transform: none;
+  background: var(--color-background, white);
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.zoomable-figure.zoomed img {
+  max-height: calc(85vh - 150px); /* Reserve space for caption */
+  width: auto;
+  object-fit: contain;
+}
+
+.zoomable-figure.zoomed p {
+  position: relative;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  width: 100%;
+  color: #4a5568;  /* A softer dark gray for better readability */
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.zoomable-figure.zoomed p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background: #e2e8f0;  /* A light gray line */
+  border-radius: 2px;
+}
+
+.zoomable-figure.zoomed:hover {
+  transform: none;
+}
+
+body.has-expanded-figure {
+  overflow: hidden;
+}
+
+

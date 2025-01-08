@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default `en` }}" class="scroll-smooth">
-    <head>
+<html lang="{{ .Site.LanguageCode }}" class="scroll-smooth {{ .Params.htmlClass }}">
     {{- partial "head.html" . -}}
-    </head>
     <body class="bg-color">
-        <div class ="max-w-screen-md px-10 mx-auto">
-        {{ partial "header.html" . }}
+        <div class="max-w-[55%] px-10 mx-auto">
+            {{- partial "header.html" . -}}
         </div>
-        <!-- <main id="content"> -->
         {{- block "main" . }}{{- end }}
-        <!-- </main> -->
-        <div class="max-w-screen-md px-10 mx-auto">
-        {{- partial "footer.html" . -}}
+        <div class="max-w-[55%] px-10 mx-auto">
+            {{- partial "footer.html" . -}}
         </div>
+        {{- partial "scripts.html" . -}}
     </body>
 </html>

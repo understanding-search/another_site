@@ -1,14 +1,13 @@
-
 {{ define "main" }}
 
 <!-- if isPlain property is set -->
 {{ if .Params.isPlain }}
-    <div class="max-w-screen-md px-10 mx-auto">
+    <div class="max-w-[55%] px-10 mx-auto">
     {{ partial "single/homepage" . }}
     </div>
 <!-- elif -->
 {{ else if .Params.isRedirect }}
-    <div class="max-w-screen-md px-10 mx-auto">
+    <div class="max-w-[55%] px-10 mx-auto">
     {{ partial "single/redirect" . }}
     </div>
 {{ else }}
@@ -21,7 +20,7 @@
     {{ partial "distill/d-article" . }}
 
     {{ partial "distill/d-appendix" . }}
-    <div class="max-w-screen-md px-10 mx-auto">
+    <div class="max-w-[55%] px-10 mx-auto">
         {{ partial "single/components/comments/comments" . }}
     </div>
 {{ end }}
