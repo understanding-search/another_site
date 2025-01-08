@@ -502,4 +502,24 @@ body.has-expanded-figure {
   overflow: hidden;
 }
 
+.content a {
+  text-decoration-line: underline;
+  font-weight: 550;
+  color: var(--amaranth);
+}
+
+.content blockquote {
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  padding: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: rgb(107 114 128);
+}
+
+.content blockquote:hover {
+  border-color: var(--hunyadi-yellow);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 
