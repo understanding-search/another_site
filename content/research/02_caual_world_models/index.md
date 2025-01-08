@@ -48,15 +48,56 @@ In our [first paper](https://arxiv.org/abs/2312.02566) we trained transformers t
 
 ## Our Setting
 
-<d-figure style="grid-column: page;">
-  <div class="maze-grid">
-    <div class="zoomable-figure">
-      <img src="CleanShot 2025-01-08 at 11.55.59.png" alt="Tokenized maze representation" class="maze-image">
-      <p style="font-size: 0.9em;">An example of a tokenized maze. 1: The adjacency list describes the connectivity of the maze, with the semicolon token ; delimiting consecutive connections. The order of connections is randomized, ellipses represent omitted connection pairs. 2,3: The origin and target specify where the path should begin and end, respectively. 4: The path itself a sequence of coordinate tokens representing the shortest path from the origin to the target. For a "rollout," we provide everything up to (and including) the <PATH START> token and autoregressively sample with argmax until a <PATH END> token is produced.</p>
-    </div>
-    <div class="zoomable-figure">
-      <img src="maze_example.png" alt="Visual maze representation" class="maze-image">
-      <p style="font-size: 0.9em;">Visual representation of the same maze as in the tokenized representation on the left. The origin is indicated in green, the target in red, and the path in blue.</p>
-    </div>
+<style>
+.maze-comparison {
+  display: flex;
+  gap: 2em;
+  width: 100%;
+  margin: 2em 0;
+}
+
+.maze-comparison > * {
+  flex: 1;
+  min-width: 0;
+  max-width: 50%;
+}
+
+.maze-comparison img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.8);
+  padding: 12px;
+}
+
+.maze-comparison figcaption,
+.maze-comparison p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 1em;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .maze-comparison {
+    flex-direction: column;
+  }
+  .maze-comparison > * {
+    max-width: 100%;
+  }
+}
+</style>
+
+<div class="maze-comparison">
+  <div class="zoomable-figure">
+    <img src="CleanShot 2025-01-08 at 11.55.59.png" alt="Tokenized maze representation">
+    <p>An example of a tokenized maze. 1: The adjacency list describes the connectivity of the maze, with the semicolon token ; delimiting consecutive connections. The order of connections is randomized, ellipses represent omitted connection pairs. 2,3: The origin and target specify where the path should begin and end, respectively. 4: The path itself a sequence of coordinate tokens representing the shortest path from the origin to the target. For a "rollout," we provide everything up to (and including) the <PATH START> token and autoregressively sample with argmax until a <PATH END> token is produced.</p>
   </div>
-</d-figure>
+  <div class="zoomable-figure">
+    <img src="maze_example.png" alt="Visual maze representation">
+    <p>Visual representation of the same maze as in the tokenized representation on the left. The origin is indicated in green, the target in red, and the path in blue.</p>
+  </div>
+</div>

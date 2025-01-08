@@ -11,15 +11,14 @@
     {{ partial "single/redirect" . }}
     </div>
 {{ else }}
-    {{ partial "distill/header" . }}
-
-    {{ partial "distill/d-front-matter" . }}
-    
-    {{ partial "distill/d-title" . }}
-
-    {{ partial "distill/d-article" . }}
-
-    {{ partial "distill/d-appendix" . }}
+    <div class="bg-color"></div>
+    <div class="distill-article">
+        {{ partial "distill/header" . }}
+        {{ partial "distill/d-front-matter" . }}
+        {{ partial "distill/d-title" . }}
+        {{ partial "distill/d-article" . }}
+        {{ partial "distill/d-appendix" . }}
+    </div>
     <div class="max-w-[55%] px-10 mx-auto">
         {{ partial "single/components/comments/comments" . }}
     </div>

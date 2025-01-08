@@ -18,14 +18,14 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
     background-repeat: repeat;
     background-size: 182px;
-    opacity: 0.4;
+    opacity: 0.15;
+    position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     bottom: 0;
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -100;
+    pointer-events: none;
+    z-index: 1;
 }
 
 html,
@@ -40,11 +40,14 @@ body {
 .bg-color {
   /* resulting css */
   min-width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   background: var(--alice-blue);
   position: absolute;
-  /* overflow: auto; */
-  /* overflow: hidden; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 
@@ -203,6 +206,7 @@ d-article d-figure img {
   height: auto !important;
   object-fit: contain !important;
   display: block !important;
+  margin: 0 auto !important;
 }
 
 /* Style the abstract consistently with main content */
@@ -377,39 +381,14 @@ strong {
   background: rgba(255,255,255,0.8);
   padding: 12px;
   width: 100%;
-  margin: 2em 0;
-}
-
-.maze-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2em;
-}
-
-.maze-image img {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  background: rgba(255,255,255,0.8);
-  padding: 12px;
-}
-
-.maze-image figcaption {
-  font-size: 0.9em;
-  margin-top: 1em;
-}
-
-/* Abstract styling */
-d-abstract.abstract {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1rem;
-  line-height: 1.6;
+  margin: 2em auto;
+  display: block;
 }
 
 /* Figure styling */
 .zoomable-figure {
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: all 0.2s ease;
   background: var(--color-background, white);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -421,8 +400,7 @@ d-abstract.abstract {
 }
 
 .zoomable-figure:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
 }
 
 .figure-overlay {
@@ -520,6 +498,44 @@ body.has-expanded-figure {
 .content blockquote:hover {
   border-color: var(--hunyadi-yellow);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Override Distill's default font sizes */
+d-article {
+  line-height: 1.7;
+}
+
+d-article p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+d-article h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+d-article h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Add this near the other distill-related styles */
+.distill-article {
+  background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        white 50px,
+        white calc(100% - 50px),
+        transparent 100%
+    );
+    padding: 2rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    min-height: 100vh;
 }
 
 
